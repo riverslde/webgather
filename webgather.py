@@ -320,14 +320,24 @@ def adminPanel():
 def linkExtract():
     target = input(
         "[+] Target ( like https://google.com/ ) with http/https  \t")
+    name = "links"
     scraper = cloudscraper.create_scraper()
     source = scraper.get(target).text
     soup = BeautifulSoup(source, 'html.parser')
     links = []
     for link in soup.find_all(attrs={'href': re.compile("http")}):
         links.append(link.get('href'))
+    for link in soup.find_all(attrs={'href': re.compile("https")}):
+        links.append(link.get('href'))
     print("\n")
-    print(links)
+    print(*set(links), sep="\n")
+    with open(home + "/webgather/" + name+"-links.txt", 'w+') as f:
+        for item in links:
+            f.write("%s\n" % item)
+    print(Fore.LIGHTMAGENTA_EX +
+          "\n [!] Found {0} links (some are duplicate). results Also saved in {1}/webgather/{2}-links.txt \n" .format(len(links), home, name))
+    input("")
+    recreate()
 
 def recreate():
     clear()
@@ -335,5 +345,5 @@ def recreate():
 
 
 clear()
-# slowprint("[ !!! ] Web Hacking tool box by @Riverslde")
+slowprint("[ !!! ] Web Hacking tool box by @Riverslde")
 options()
