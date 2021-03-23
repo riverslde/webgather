@@ -12,3 +12,13 @@ Web pentesting toolkit
  | Banner Grab <br>
  | Admin Panel Finder <br>
  | Page Link Extractors <br>
+ 
+ ## Installation
+
+> Python 3
+
+```
+$ git clone https://github.com/riverslde/webgather.git
+$ cd webgather
+$ pip install -r requirements.txt
+```
