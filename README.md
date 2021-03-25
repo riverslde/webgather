@@ -1,4 +1,4 @@
-# webgather
+# webgather web pentesting framework
 Web pentesting toolkit
 
 ## Menu
