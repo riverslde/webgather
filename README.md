@@ -20,5 +20,5 @@ Web pentesting toolkit
 ```
 $ git clone https://github.com/riverslde/webgather.git
 $ cd webgather
-$ pip install -r requirements.txt
+$ pip3 install -r requirements.txt
 ```
