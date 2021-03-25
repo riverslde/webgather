@@ -220,7 +220,7 @@ def exiftool(prog):
             os.system(
                 "mv thumb16.jpg {0}/webgather/payload-php.jpg" .format(home))
             os.system("rm thumb16.jpg_original")
-            print(Fore.RED + '''[!] Injection completed and file saved in {0}/payload.jpg
+            print(Fore.RED + '''[!] Injection completed and file saved in {0}/webgather/payload.jpg
         Ex:   website.com/payload.jpg?cmd=ls ''' .format(home))
         except:
             print("[-] Some error occured")
@@ -238,7 +238,7 @@ def exiftool(prog):
             os.system(
                 "mv thumb16.jpg {0}/webgather/payload-asp.jpg" .format(home))
             os.system("rm thumb16.jpg_original")
-            print(Fore.RED + '''[!] Injection completed and file saved in {0}/payload.jpg
+            print(Fore.RED + '''[!] Injection completed and file saved in {0}/webgather/payload.jpg
         Ex:   website.com/payload.jpg?cmd=ls ''' .format(home))
         except:
             print("[-] Some error occured")
